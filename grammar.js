@@ -2,10 +2,9 @@ module.exports = grammar({
   name: "m3u",
 
   rules: {
-    file: ($) => repeat(seq(choice($._blank, $.uri, $.comment, $.tag), $._eol)),
+    file: ($) => repeat(seq(choice($.uri, $.comment, $.tag), $._eol)),
 
     _eol: (_) => /\r?\n/,
-    _blank: (_) => /\n/,
     uri: (_) => /[^#\n][^\n]*/,
     comment: (_) => choice(/#EX[^T][^\n]*/, /#E[^X][^\n]*/, /#[^E][^\n]*/),
 
