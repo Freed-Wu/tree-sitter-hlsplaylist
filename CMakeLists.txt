@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.10)
+string(REGEX MATCH [[[0-9](\.[0-9])*]] VERSION "$ENV{GITHUB_REF_NAME}")
+if(NOT VERSION)
+  set(VERSION 0.0.0.0)
+endif()
+set(HOMEPAGE_URL https://github.com/Freed-Wu/tree-sitter-m3u)
+string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE ${HOMEPAGE_URL})
+project(
+  tree-sitter-${LANGUAGE}
+  VERSION ${VERSION}
+  DESCRIPTION tree-sitter-${LANGUAGE}
+  HOMEPAGE_URL ${HOMEPAGE_URL})
+include_directories(src)
+add_library(${LANGUAGE} SHARED src/parser.c)
+set_target_properties(${LANGUAGE} PROPERTIES PREFIX "")
+if(DEFINED SKBUILD_DATA_DIR)
+  set(CMAKE_INSTALL_FULL_LIBDIR ${SKBUILD_DATA_DIR}/lib)
+endif()
+if(NOT DEFINED CMAKE_INSTALL_FULL_LIBDIR)
+  include(GNUInstallDirs)
+endif()
+install(TARGETS ${LANGUAGE} DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/parser)
+
+set(CPACK_PACKAGE_CONTACT ${HOMEPAGE_URL}/issues)
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Wu Zhenyu <wuzhenyu@ustc.edu>")
+set(CPACK_RPM_PACKAGE_LICENSE GPL3)
+set(CPACK_RPM_PACKAGE_URL ${HOMEPAGE_URL})
+include(CPack)
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
+set(CPACK_ARCHIVE_THREADS 0)
+set(CPACK_THREADS 0)
