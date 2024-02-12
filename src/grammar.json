@@ -11,10 +11,6 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_blank"
-              },
-              {
-                "type": "SYMBOL",
                 "name": "uri"
               },
               {
@@ -37,10 +33,6 @@
     "_eol": {
       "type": "PATTERN",
       "value": "\\r?\\n"
-    },
-    "_blank": {
-      "type": "PATTERN",
-      "value": "\\n"
     },
     "uri": {
       "type": "PATTERN",
