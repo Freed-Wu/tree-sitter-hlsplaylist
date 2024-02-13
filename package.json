@@ -1,11 +1,13 @@
 {
-  "name": "tree-sitter-m3u",
+  "name": "tree-sitter-hlsplaylist",
   "version": "0.0.1",
-  "description": "m3u grammar for tree-sitter",
+  "description": "hlsplaylist grammar for tree-sitter",
   "main": "bindings/node",
   "keywords": [
     "parsing",
-    "incremental"
+    "incremental",
+    "m3u",
+    "m3u8"
   ],
   "dependencies": {
     "nan": "^2.12.1"
@@ -18,10 +20,10 @@
   },
   "tree-sitter": [
     {
-      "scope": "source.m3u",
+      "scope": "source.hlsplaylist",
       "file-types": [
-        "m3u",
-        "m3u8"
+        "hlsplaylist",
+        "hlsplaylist8"
       ]
     }
   ]

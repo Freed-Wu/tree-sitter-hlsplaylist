@@ -1,7 +1,7 @@
 {  # noqa: B018 # type: ignore
     "targets": [
         {
-            "target_name": "tree_sitter_m3u_binding",
+            "target_name": "tree_sitter_hlsplaylist_binding",
             "include_dirs": ["<!(node -e \"require('nan')\")", "src"],
             "sources": [
                 "bindings/node/binding.cc",

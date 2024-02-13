@@ -2,7 +2,7 @@ r"""Test __init__.py."""
 
 import os
 
-from tree_sitter_m3u import parser
+from tree_sitter_hlsplaylist import parser
 
 
 class Test:
@@ -15,7 +15,7 @@ class Test:
         :rtype: None
         """
         with open(
-            os.path.join(os.path.dirname(__file__), "zho.m3u"), "rb"
+            os.path.join(os.path.dirname(__file__), "zho.hlsplaylist"), "rb"
         ) as f:
             text = f.read()
         tree = parser.parse(text)

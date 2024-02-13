@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: "m3u",
+  name: "hlsplaylist",
 
   rules: {
     file: ($) => repeat(seq(choice($.uri, $.comment, $.tag), $._eol)),
