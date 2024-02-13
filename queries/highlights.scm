@@ -6,27 +6,25 @@
 
 (tag_name) @keyword
 
-(attribute_name) @variable.builtin
+(attribute_name) @attribute
 
 [
   (dec)
   (hex)
+  (resolution)
+  (range)
 ] @number
 
 (float) @number.float
 
-[
-  (resolution)
-  (range)
-] @number.special
-
 (string) @string
 
 [
-  (title)
   (enum)
   (date_time_msec)
 ] @string.special
+
+(title) @markup.heading
 
 ; Literals
 ["=" "x" "@"] @operator
