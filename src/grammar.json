@@ -1,5 +1,5 @@
 {
-  "name": "m3u",
+  "name": "hlsplaylist",
   "rules": {
     "file": {
       "type": "REPEAT",
