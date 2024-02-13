@@ -64,6 +64,9 @@ It can be used by:
       Make sure `/the/parent/directory/of/this/repo` in `parser-directories` of
       your `~/.config/tree-sitter/config.json`
 - Language servers
+  - [vscode-anycode](https://github.com/microsoft/vscode-anycode)
+  - [Navigating code on GitHub](https://docs.github.com/en/repositories/working-with-files/using-files/navigating-code-on-github):
+    supported by [semantic](https://github.com/github/semantic)
 - Libraries
   - [tree-sitter-hlsplaylist](https://www.npmjs.com/package/tree-sitter-hlsplaylist):
     for node
