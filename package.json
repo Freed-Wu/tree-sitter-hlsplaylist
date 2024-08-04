@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-hlsplaylist",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Hlsplaylist grammar for tree-sitter",
   "repository": "github:tree-sitter/tree-sitter-hlsplaylist",
   "license": "MIT",
