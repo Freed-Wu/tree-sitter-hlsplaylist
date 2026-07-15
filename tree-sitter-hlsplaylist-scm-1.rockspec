@@ -40,4 +40,5 @@ end
 build = {
   type = "treesitter-parser",
   lang = "hlsplaylist",
+  generate = true,
 }
