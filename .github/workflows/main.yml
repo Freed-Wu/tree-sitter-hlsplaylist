@@ -152,6 +152,7 @@ jobs:
           luaVersion: "5.1"
       - uses: leafo/gh-actions-luarocks@v6
       - run: |
+          luarocks install tree-sitter-cli
           luarocks install tree-sitter-hlsplaylist
           luarocks pack tree-sitter-hlsplaylist
           scripts/upload.sh ./*.rock
@@ -203,13 +204,9 @@ jobs:
           npm install -g tree-sitter-cli
           tree-sitter init -u
           tree-sitter generate
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
-          cache: pip
+      - uses: astral-sh/setup-uv@v8.3.2
       - name: Build
         run: |
-          pip install uv
           uv build --sdist
       - uses: actions/upload-artifact@v4
         if: "! startsWith(github.ref, 'refs/tags/')"
