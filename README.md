@@ -45,5 +45,16 @@
 [hlsplaylist](https://developer.apple.com/streaming/) (m3u, m3u8) grammar for
 [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
-If you don't want to install nodejs to generate `src/grammar.json`,
-use branch [main](https://github.com/Freed-Wu/tree-sitter-hlsplaylist/tree/main).
+## Usage
+
+### [rocks.nvim](https://github.com/lumen-oss/rocks.nvim)
+
+```toml
+[plugins]
+"rocks-treesitter.nvim" = "VERSION"
+tree-sitter-hlsplaylist = "VERSION"
+```
+
+### [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+Use branch [main](https://github.com/Freed-Wu/tree-sitter-hlsplaylist/tree/main).
