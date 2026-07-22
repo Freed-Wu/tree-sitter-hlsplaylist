@@ -50,6 +50,9 @@
 ### [rocks.nvim](https://github.com/lumen-oss/rocks.nvim)
 
 ```toml
+[treesitter]
+auto_highlight = "all"
+
 [plugins]
 "rocks-treesitter.nvim" = "VERSION"
 tree-sitter-hlsplaylist = "VERSION"
